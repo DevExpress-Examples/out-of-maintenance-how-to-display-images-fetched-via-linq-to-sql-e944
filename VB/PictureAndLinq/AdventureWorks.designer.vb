@@ -40,7 +40,7 @@ Partial Public Class AdventureWorksDataContext
   #End Region
 	
 	Public Sub New()
-        MyBase.New(Settings.Default.AdventureWorksConnectionString, mappingSource)
+        MyBase.New(Global.PictureAndLinq.Settings.Default.AdventureWorksConnectionString, mappingSource)
         OnCreated()
 	End Sub
 	
