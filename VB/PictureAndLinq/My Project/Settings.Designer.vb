@@ -52,11 +52,11 @@ Partial Friend NotInheritable Class Settings
             Return defaultInstance
         End Get
     End Property
-
-    <Global.System.Configuration.ApplicationScopedSettingAttribute(),
-     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
-     Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),
-     Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=AdventureWorks2012;Integrated Security=True")>
+    
+    <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=AdventureWorks;Integrated Security=True")>  _
     Public ReadOnly Property AdventureWorksConnectionString() As String
         Get
             Return CType(Me("AdventureWorksConnectionString"),String)
@@ -72,9 +72,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.Settings
+        Friend ReadOnly Property Settings() As Global.PictureAndLinq.Settings
             Get
-                Return Global.Settings.Default
+                Return Global.PictureAndLinq.Settings.Default
             End Get
         End Property
     End Module
